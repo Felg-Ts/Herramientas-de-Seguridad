@@ -21,21 +21,21 @@ wget https://www.tenable.com/downloads/api/v1/public/pages/nessus/downloads/1687
 
 Instalamos el paquete .deb con apt:
 
-apt install -f ./Nessus-10.3.0-debian9\_amd64.deb
+`apt install -f ./Nessus-10.3.0-debian9\_amd64.deb`
 
 ![c3](img/alumno1/sad_p1_c11.PNG)
 
 Activamos y habilitamos el servicio nessusd con los comandos:
 
-“systemctl start nessusd”
+`systemctl start nessusd`
 
-“systemctl enable nessusd.service”
+`systemctl enable nessusd.service`
 
 ![c4](img/alumno1/sad_p1_c12.PNG)
 
 Comprobamos en que puerto se está ejecutando nessus con el comando:
 
-ss -plunt|grep 8834
+`ss -plunt|grep 8834`
 
 ![c5](img/alumno1/sad_p1_c13.PNG)
 
