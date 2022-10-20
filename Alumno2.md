@@ -14,6 +14,8 @@ con `snort -V` podemos comprobar que se ha instalado correctamente:
 
 ![c1](img/alumno2/snort_c1)
 
+---
+
 ## **Configuración de la red**
 
 Tras instalarlo, iniciará la configuración de la red. En la configuración que se abre, podemos seleccionar la ip/rango de ips de la máquina, aunque más adelante modificando el fichero de configuración, podemos elegir que utilice solo una interfaz de red o todas (la opción por defecto).
@@ -32,6 +34,8 @@ Como el propio fichero indica, después de modificarlo tenemos que ejecutar el s
 
 Tras la ejecución del comando, reconfiguramos Snort, decidiendo cuando se ejecuta, las interfaces e ips, si activamos el modo promiscuo, y por último si queremos que se cree una tarea de cron para mandar correos diariamente con el resultado del log.
 
+---
+
 ## **Reglas**:
 
 Para configurar los grupos de reglas que queremos activar, tenemos que editar el fichero de configuración /etc/snort/snort.conf:
@@ -39,6 +43,8 @@ Para configurar los grupos de reglas que queremos activar, tenemos que editar el
 ![c3](img/alumno2/snort_c3)
 
 En la instalación que se realiza de los repositorios de debian, están incluidas las reglas de la comunidad. En el caso de que queramos utilizar una set de reglas concreta, habría que descomentar el set específico. También se puede observar en la imagen como el fichero de reglas personalizadas está activo (local.rules).
+
+---
 
 ## **Reglas propias**
 
@@ -66,6 +72,8 @@ vamos a analizar la regla:
 |Message|msg:“Ping detectado”|Mensaje a mostrar cuando aplique la regla|
 |Rule ID|sid:1000001|ID único de la regla|
 |Revision info|rev:1|Información de revisión|
+
+---
 
 **Demostración de la regla**
 
