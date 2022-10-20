@@ -135,7 +135,7 @@ Una vez probado que el login de nuestro servidor apache está funcionando, es ho
 
 ![c12](img/alumno4/John_The_Ripper_c12.png)
 
-**Funcionamiento en Mysql.**
+## **Funcionamiento en Mysql.**
 
 No consigo obtener los hashes de mysql, así que probaremos una función de mysql que encripta como un hash de mysql. En nuestra base de datos probamos lo siguiente y nos devolverá un hash mysql.
 
