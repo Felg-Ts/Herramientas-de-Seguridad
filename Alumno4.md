@@ -56,26 +56,28 @@ Para usar John con un diccionario, tenemos que usar este comando:
  	 # sudo john --wordlist=/ruta/del/diccionario.txt  - -format=crypt nombrefichero
 ```
 
+![c2](img/alumno4/John_The_Ripper_c2.png)
+
 Como se puede ver en la captura, lleva 2 contraseñas crackeadas y entre paréntesis el nombre de los usuarios. Este es un modo el cual requiere mucho tiempo ya que depende de la potencia de la máquina.
 
 En la siguiente captura podemos observar las contraseñas crackeadas y el tiempo que ha necesitado para ello.
 
-
+![c3](img/alumno4/John_The_Ripper_c3.png)
 
 A continuación probaremos el modo incremental, que usa unas reglas definidas por sistema para realizar un ataque de fuerza bruta.
 
 El comando usado para el modo incremental es el siguiente:
 
-`	`# sudo john --incremental --format=crypt nombrefichero
+`	 # sudo john --incremental --format=crypt nombrefichero`
 
-
+![c4](img/alumno4/John_The_Ripper_c4.png)
 
 
 Por último veremos el funcionamiento del modo externo, para ello, debemos usar el modo   - -external:nombre donde nombre es el nombre del programa que vamos a usar. A continuación dejo el comando que he usado:
 
-`	`# john --external:LanMan passwords
+`	 # john --external:LanMan passwords`
 
-
+![c5](img/alumno4/John_The_Ripper_c5.png)
 
 **Funcionamiento en Windows**
 
@@ -85,14 +87,15 @@ Una vez descargado mimikatz, elevamos los privilegios con el siguiente comando.
 
 \# token::elevate
 
+![c6](img/alumno4/John_The_Ripper_c6.png)
 
 Al ejecutar este comando, nos muestra los hashes NTML y los nombres de usuario.
 
-
-
+![c7](img/alumno4/John_The_Ripper_c7.png)
 
 Una vez obtenidos los hashes, utilizaremos John para crackearlos. Hemos instalado john en Windows y probaremos a crackear la contraseña de los usuarios.
 
+![c8](img/alumno4/John_The_Ripper_c8.png)
 
 **Funcionamiento en Apache2.**
 
@@ -100,8 +103,9 @@ Para atacar a un servidor apache con John, tenemos que atacar al archivo htpassw
 
 Primero configuraremos el servidor apache, para crear un usuario con contraseña usaremos el siguiente comando:
 
-`	`# htpasswd -c /home/usuario/.htpasswd usuario
+`	 # htpasswd -c /home/usuario/.htpasswd usuario`
 
+![c9](img/alumno4/John_The_Ripper_c9.png)
 
 Una vez creado los usuarios, haremos que esté operativo en nuestro servidor y cada vez que accedemos a la web nos pedirá usuario y contraseña. 
 
@@ -111,26 +115,31 @@ Para ello, tenemos que editar el fichero de configuración de apache.
 
 Añadimos lo siguiente
 
+![c10](img/alumno4/John_The_Ripper_c10.png)
 
 Como podemos comprobar al acceder a la web, nos pide autenticación.
 
+![c11](img/alumno4/John_The_Ripper_c11.png)
 
 Una vez probado que el login de nuestro servidor apache está funcionando, es hora de intentar crackear los hashes del archivo htpasswd.
 
+![c12](img/alumno4/John_The_Ripper_c12.png)
 
 **Funcionamiento en Mysql.**
 
 No consigo obtener los hashes de mysql, así que probaremos una función de mysql que encripta como un hash de mysql. En nuestra base de datos probamos lo siguiente y nos devolverá un hash mysql.
 
-`	`# select passwd(‘contraseña’);
+`	 # select passwd(‘contraseña’);`
 
+![c13](img/alumno4/John_The_Ripper_c13.png)
 
 Creamos un fichero con el siguiente formato: *usuario:\*password*. Probaremos a con varios usuarios y contraseñas y ejecutaremos john para ver cuántas contraseñas resuelve.
 
 Al ejecutar john, podemos observar que nos ha crackeado 2 contraseñas.
 
+![c14](img/alumno4/John_The_Ripper_c14.png)
 
-
+![c15](img/alumno4/John_The_Ripper_c15.png)
 
 **Los archivos más importantes de John The Ripper**.
 
@@ -138,19 +147,21 @@ En el directorio /root/.jon nos aparecen tres archivos, llamados john.log, john.
 
 - En el archivo john.log se registra todo lo que va haciendo john. Se puede mirar en tiempo real mientras john se ejecuta, para ello, usamos el siguiente comando:
 
-\# tail -f /root/.john/john.log
+`    # tail -f /root/.john/john.log`
 
 - En el archivo john.pot se guardan las contraseñas que han sido crackeadas junto al hash.
 
-
+![c16](img/alumno4/John_The_Ripper_c16.png)
 
 También se puede usar el comando john - -show nombrefichero para ver las contraseñas crackeadas.
 
+![c17](img/alumno4/John_The_Ripper_c17.png)
 
 - John, utiliza el archivo john.rec para continuar por donde se había quedado en caso de que suceda algo inesperado. el comando para volver donde estaba es el siguiente:
 
-`	`# john --restore
+`	 # john --restore`
 
+![c18](img/alumno4/John_The_Ripper_c18.png)
 
 **Fichero de configuración en John The Ripper**
 
@@ -168,14 +179,18 @@ La sección general se llama *[Options]*, y se utiliza para asignar valores a ci
 - Save: Indica el número de segundos tras los cuales se guarda el estado en el que se encuentra el proceso de descifrado, y así, si el ordenador se bloqueara, se podría continuar a partir de ese punto y no se tendría que empezar de nuevo todo el proceso. Por defecto son 600 segundos.
 - Beep: Indica si se quiere que JtR emita un pitido cada vez que se descifre una contraseña.
 
+![c19](img/alumno4/John_The_Ripper_c19.png)
+
+
 Las reglas que utilizan los modos *wordlist* y *single crack* para generar las palabras que se utilizarán para descubrir las contraseñas, se especifican en secciones independientes, concretamente en las secciones *[List.Rules.Wordlist]* y *[List.Rules.Single]*, respectivamente. Estas reglas, una por línea, se aplican a cada una de las palabras del diccionario en el modo *wordlist*, y a la información extraída del fichero */etc/passwd* en el modo *single crack*.
 
 Reglas Single Crack:
 
+![c20](img/alumno4/John_The_Ripper_c20.png)
 
 Reglas wordlist:
 
-
+![c21](img/alumno4/John_The_Ripper_c21.png)
 
 Para definir los parámetros del modo *incremental*, es necesario crear una sección usando [Incremental:NAME], donde NAME es el nombre del modo incremental que se está parametrizando.
 
@@ -187,5 +202,8 @@ Algunas de las variables que pueden asignarse son las siguientes:
 - CharCount: Establece la cantidad de caracteres distintos como mínimo que poseerá el juego de caracteres. Si tiene menos, se producirá un error.
 - Extra ***=*** Caracteres: Especifica algunos caracteres extra, distintos a los del juego de caracteres, que podrán ser usados para formar las potenciales contraseñas, aunque JtR tendrá en cuenta que estos caracteres aparecen con menos frecuencia en las contraseñas.
 
+![c22](img/alumno4/John_The_Ripper_c22.png)
 
 John trabaja también en un cuarto modo denominado externo, para lo cual se debe crear la sección *[List.External:NAME]*. En esta sección lo que hay que hacer es definir completamente el funcionamiento del modo mediante el desarrollo de las funciones init(), filter(), generate() y restore(). Estas funciones se deben codificar utilizando un lenguaje C reducido que el propio John incorpora y que puede compilar.
+
+![c23](img/alumno4/John_The_Ripper_c23.png)
