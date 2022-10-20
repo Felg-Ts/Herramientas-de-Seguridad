@@ -4,7 +4,7 @@
 
 Es una herramienta de software gratuita para descifrar contraseñas, desarrollada por Openwall. En un principio fue desarrollado para sistemas operativos Unix, pero más tarde también se desarrolló para otras plataformas. Es uno de los programas de prueba y ruptura de contraseñas más populares, ya que combina varios crackers de contraseñas en un solo paquete, detecta automáticamente los tipos de hash de contraseñas e incluye un cracker personalizable. Se puede ejecutar con varios formatos de contraseña cifrada, incluidos varios tipos de hash de contraseña cifrada que se encuentran comúnmente en Linux o Windows.
 
-**¿Cómo funciona John The Ripper?**
+### **¿Cómo funciona John The Ripper?**
 
 John tiene cuatro modos de funcionamiento, más adelante veremos cada uno en detalle. Si no se especifica el modo que se quiere utilizar, la herramienta ejecutará todos los modos en el siguiente orden, por defecto.
 
@@ -18,7 +18,7 @@ John tiene cuatro modos de funcionamiento, más adelante veremos cada uno en det
 
 Ahora que hemos visto cómo funciona, veremos cómo se utiliza.
 
-**¿Cómo utilizar John The Ripper?**
+### **¿Cómo utilizar John The Ripper?**
 
 Voy a usar un escenario con una máquina virtual Debian, tendrá John instalado y haré varios usuarios con distintas contraseñas y a partir del /etc/passwd y /etc/shadow veremos como crackear las contraseñas. 
 
@@ -32,7 +32,7 @@ Para instalarlo en Debian, basta con ejecutar:
 
 ---
 
-## **G**enerar Dicc**
+## **Generar Dicc**
 
 Suponemos que hemos conseguido tener un acceso root y hemos conseguido una copia de los ficheros /etc/passwd y /etc/shadow. Tenemos 30 usuarios y sus respectivos hashes de contraseñas. Ahora fusionamos  ambos ficheros con el comando unshadow.
 
@@ -163,7 +163,7 @@ Al ejecutar john, podemos observar que nos ha crackeado 2 contraseñas.
 
 ![c15](img/alumno4/John_The_Ripper_c15.png)
 
-**Los archivos más importantes de John The Ripper**.
+### **Los archivos más importantes de John The Ripper**.
 
 En el directorio /root/.jon nos aparecen tres archivos, llamados john.log, john.pot y john.rec.
 
@@ -185,7 +185,7 @@ También se puede usar el comando john - -show nombrefichero para ver las contra
 
 ![c18](img/alumno4/John_The_Ripper_c18.png)
 
-**Fichero de configuración en John The Ripper**
+### **Fichero de configuración en John The Ripper**
 
 En el fichero john.conf(en mi máquina se encuentra en /etc/john/john.conf), se pueden establecer opciones globales, reglas para el modo wordlist y single crack, asignar valores a los parámetros del modo incremental e incluso definir modos externos de crackeo.
 
