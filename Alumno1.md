@@ -1,10 +1,10 @@
-## **Herramienta de escaneo de vulnerabilidades.**
+# **Herramienta de escaneo de vulnerabilidades.**
 
-### **Nessus:**
+# **Nessus:**
 
 Nessus es un programa para realizar escaneos sobre los dispositivos de las redes en busca de vulnerabilidades
 
-**-Instalación**
+## **-Instalación**
 
 Instalamos el paquete wget con el comando:
 
@@ -39,7 +39,7 @@ Comprobamos en que puerto se está ejecutando nessus con el comando:
 
 ![c5](img/alumno1/sad_p1_c13.PNG)
 
-**-Conf. Inicial**
+## **-Conf. Inicial**
 
 Se puede acceder al programa escribiendo en la barra de url del navegador
 
@@ -65,7 +65,7 @@ Cuando creemos el usuario y la contraseña comenzaran a descargarse los plugins 
 
 ![c10](img/alumno1/sad_p1_c18.PNG)
 
-**-Prueba de uso**
+## **-Prueba de uso**
 
 Para realizar un escaneo lo primero que hay que hacer es pulsar en create a new scan o en el botón New Scan.
 
@@ -120,7 +120,7 @@ Si pulsamos sobre una de las vulnerabilidades podemos ver información más deta
 
 ![c18](img/alumno1/sad_p1_c8.PNG)
 
-**-Uso en Red**
+## **-Uso en Red**
 
 Ahora vamos a probar a escanear toda una red, para variar un poco en vez de volver a hacer el Basic Network Scan, haremos el Advanced Scan.
 
@@ -135,7 +135,7 @@ Esta parte del proceso es igual al escaneo anterior pero con la diferencia de qu
 
 ![c20](img/alumno1/sad_p1_20.PNG)
 
-**-Monitorización continua**
+## **-Monitorización continua**
 
 Ahora vamos a configurar un escaneo para que se ejecute de manera automática.
 
@@ -165,9 +165,9 @@ Ya está configurado el escaneo. Lo puse para las 23:10 ya son las 23:11 y como 
 
 ![c26](img/alumno1/sad_p1_c30.PNG)
 
-**-Alertas Correo**
+## **-Alertas Correo**
 
-**Instalación postfix**
+# **Instalación postfix**
 
 Para recibir alertas por correo primero tenemos que configurar el servidor de correo postfix:
 
@@ -179,7 +179,7 @@ sudo apt install postfix
 
 En el menú que aparece seleccionamos **internet site**, y en el siguiente diálogo introducimos (si no está ya) el hostname que consultamos antes.
 
-**Configuración postfix**
+# **Configuración postfix**
 
 Para configurar el servidor editamos el fichero /etc/postfix/main.cf, tenemos que modificar las siguientes líneas:
 
@@ -195,7 +195,7 @@ podemos enviar un correo de pruebas:
 
 echo "Cuerpo del correo" | mail -s "Asunto del correo" email\_address
 
-**-Análisis Informes**
+## **-Análisis Informes**
 
 Para la creación de un informe tenemos que pulsar al botón report que aparece cuando estamos viendo los resultados de un escaneo. Cuando pulsemos el botón podremos ver que lo podemos generar en html y csv, también se puede elegir la plantilla y la información a mostrar. En mi caso lo generare en html porque para mi se lee mejor.
 
@@ -209,8 +209,7 @@ Cuando pulsemos sobre el fichero html podremos ver que se muestra en el navegado
 
 ![c29](img/alumno1/sad_p1_c23.PNG)
 
-**-Demo Parcheo**
-
+## **-Demo Parcheo**
 
 Cuando revisamos los resultados de los escaneos podemos ver que hay una pestaña que dice remediations. Si pulsamos en ella podremos ver algunas vulnerabilidades y lo que tenemos que hacer para corregirlas.
 
