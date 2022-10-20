@@ -4,6 +4,8 @@
 
 Nessus es un programa para realizar escaneos sobre los dispositivos de las redes en busca de vulnerabilidades
 
+---
+
 ## **-Instalación**
 
 Instalamos el paquete wget con el comando:
@@ -39,6 +41,8 @@ Comprobamos en que puerto se está ejecutando nessus con el comando:
 
 ![c5](img/alumno1/sad_p1_c13.PNG)
 
+---
+
 ## **-Conf. Inicial**
 
 Se puede acceder al programa escribiendo en la barra de url del navegador
@@ -64,6 +68,8 @@ Ahora tenemos que crear el usuario y contraseña para loguearnos.
 Cuando creemos el usuario y la contraseña comenzaran a descargarse los plugins de nessus. Este es el último paso para comenzar a utilizar nessus.
 
 ![c10](img/alumno1/sad_p1_c18.PNG)
+
+---
 
 ## **-Prueba de uso**
 
@@ -120,6 +126,8 @@ Si pulsamos sobre una de las vulnerabilidades podemos ver información más deta
 
 ![c18](img/alumno1/sad_p1_c8.PNG)
 
+---
+
 ## **-Uso en Red**
 
 Ahora vamos a probar a escanear toda una red, para variar un poco en vez de volver a hacer el Basic Network Scan, haremos el Advanced Scan.
@@ -134,6 +142,8 @@ Cuando terminemos de configurar el escaneo lo ejecutamos.
 Esta parte del proceso es igual al escaneo anterior pero con la diferencia de que ahora en vez de escanear solo un host ahora son todos los host de la red.
 
 ![c20](img/alumno1/sad_p1_c20.PNG)
+
+---
 
 ## **-Monitorización continua**
 
@@ -165,6 +175,8 @@ Ya está configurado el escaneo. Lo puse para las 23:10 ya son las 23:11 y como 
 
 ![c26](img/alumno1/sad_p1_c30.PNG)
 
+---
+
 ## **-Alertas Correo**
 
 ### **Instalación postfix**
@@ -195,6 +207,8 @@ podemos enviar un correo de pruebas:
 
 echo "Cuerpo del correo" | mail -s "Asunto del correo" email\_address
 
+---
+
 ## **-Análisis Informes**
 
 Para la creación de un informe tenemos que pulsar al botón report que aparece cuando estamos viendo los resultados de un escaneo. Cuando pulsemos el botón podremos ver que lo podemos generar en html y csv, también se puede elegir la plantilla y la información a mostrar. En mi caso lo generare en html porque para mi se lee mejor.
@@ -208,6 +222,8 @@ Cuando pulsemos sobre el fichero html podremos ver que se muestra en el navegado
 ![c28](img/alumno1/sad_p1_c22.PNG)
 
 ![c29](img/alumno1/sad_p1_c23.PNG)
+
+---
 
 ## **-Demo Parcheo**
 
