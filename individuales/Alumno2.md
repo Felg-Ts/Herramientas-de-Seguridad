@@ -12,7 +12,7 @@ El paquete de Snort se encuentra en los repositorios de debian, por lo que podem
 
 con `snort -V` podemos comprobar que se ha instalado correctamente:
 
-![c1](img/alumno2/snort_c1.png)
+![c1](/img/alumno2/snort_c1.png)
 
 ---
 
@@ -20,7 +20,7 @@ con `snort -V` podemos comprobar que se ha instalado correctamente:
 
 Tras instalarlo, iniciará la configuración de la red. En la configuración que se abre, podemos seleccionar la ip/rango de ips de la máquina, aunque más adelante modificando el fichero de configuración, podemos elegir que utilice solo una interfaz de red o todas (la opción por defecto).
 
-![c2](img/alumno2/snort_c2.png)
+![c2](/img/alumno2/snort_c2.png)
 
 Para modificar las opciones tras la instalación tenemos que modificar el fichero /etc/snort/snort.debian.conf (al tratarse de una instalación en debian, se carga el contenido de este fichero antes que la propia configuración de snort). Concretamente nos interesan las siguientes líneas:
 
@@ -40,7 +40,7 @@ Tras la ejecución del comando, reconfiguramos Snort, decidiendo cuando se ejecu
 
 Para configurar los grupos de reglas que queremos activar, tenemos que editar el fichero de configuración /etc/snort/snort.conf:
 
-![c3](img/alumno2/snort_c3.png)
+![c3](/img/alumno2/snort_c3.png)
 
 En la instalación que se realiza de los repositorios de debian, están incluidas las reglas de la comunidad. En el caso de que queramos utilizar una set de reglas concreta, habría que descomentar el set específico. También se puede observar en la imagen como el fichero de reglas personalizadas está activo (local.rules).
 
@@ -50,7 +50,7 @@ En la instalación que se realiza de los repositorios de debian, están incluida
 
 De momento el fichero de reglas propias está vacío. Las reglas se construyen de la siguiente manera:
 
-![c4](img/alumno2/snort_c4.png)
+![c4](/img/alumno2/snort_c4.png)
 
 Como podemos ver, La regla consta de dos partes principales, la **cabecera**, que contiene información relacionada con la red, y las **opciones**, que contienen detalles de investigación de paquetes. La regla que se muestra a continuación, sirve para detectar que se está realizando un ping a la máquina:
 
@@ -81,7 +81,7 @@ Una vez hemos añadido al regla al fichero de local.rules, ya podemos probar la 
 
 `sudo snort -A console -q -c /etc/snort/snort.conf -i enp1s0`
 
-![c5](img/alumno2/snort_c5.png)
+![c5](/img/alumno2/snort_c5.png)
 
 En el caso de esta regla, hemos utilizado la Action alert, que genera una alerta cuando los requisitos se cumplen. Sin embargo, hay más opciones, que son:
 
