@@ -30,6 +30,8 @@ Para instalarlo en Debian, basta con ejecutar:
 
 `	 # sudo apt install john`
 
+---
+
 ## **G**enerar Dicc**
 
 Suponemos que hemos conseguido tener un acceso root y hemos conseguido una copia de los ficheros /etc/passwd y /etc/shadow. Tenemos 30 usuarios y sus respectivos hashes de contraseñas. Ahora fusionamos  ambos ficheros con el comando unshadow.
@@ -39,6 +41,8 @@ Suponemos que hemos conseguido tener un acceso root y hemos conseguido una copia
 `	 # cp /etc/shadow ./shadow.txt`
 
 `    # unshadow passwd.txt shadow.txt > nombrefichero`
+
+---
 
 ## **Demo Brute**
 
@@ -56,6 +60,8 @@ Para ver los hashes crackeados se usa el siguiente comando
 
 
 como podemos ver con single crack no ha crackeado ninguna contraseña, debido a que el nivel de las contraseñas son medianamente fuertes. He usado el comando pwgen para generarlas.
+
+---
 
 ## **Demo Dicc**
 
@@ -89,6 +95,8 @@ Por último veremos el funcionamiento del modo externo, para ello, debemos usar 
 
 ![c5](img/alumno4/John_The_Ripper_c5.png)
 
+---
+
 ## **Funcionamiento en Windows**
 
 Para crackear contraseñas de usuarios en Windows, necesitamos obtener los hashes de las contraseñas. Para ello, usaremos en la máquina windows la herramienta mimikatz.
@@ -106,6 +114,8 @@ Al ejecutar este comando, nos muestra los hashes NTML y los nombres de usuario.
 Una vez obtenidos los hashes, utilizaremos John para crackearlos. Hemos instalado john en Windows y probaremos a crackear la contraseña de los usuarios.
 
 ![c8](img/alumno4/John_The_Ripper_c8.png)
+
+---
 
 ## **Funcionamiento en Apache2.**
 
@@ -134,6 +144,8 @@ Como podemos comprobar al acceder a la web, nos pide autenticación.
 Una vez probado que el login de nuestro servidor apache está funcionando, es hora de intentar crackear los hashes del archivo htpasswd.
 
 ![c12](img/alumno4/John_The_Ripper_c12.png)
+
+---
 
 ## **Funcionamiento en Mysql.**
 
