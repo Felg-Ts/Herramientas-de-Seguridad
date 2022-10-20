@@ -22,9 +22,15 @@ Ahora que hemos visto cómo funciona, veremos cómo se utiliza.
 
 Voy a usar un escenario con una máquina virtual Debian, tendrá John instalado y haré varios usuarios con distintas contraseñas y a partir del /etc/passwd y /etc/shadow veremos como crackear las contraseñas. 
 
+---
+
+## **Instalación**
+
 Para instalarlo en Debian, basta con ejecutar:
 
 `	 # sudo apt install john`
+
+## **G**enerar Dicc**
 
 Suponemos que hemos conseguido tener un acceso root y hemos conseguido una copia de los ficheros /etc/passwd y /etc/shadow. Tenemos 30 usuarios y sus respectivos hashes de contraseñas. Ahora fusionamos  ambos ficheros con el comando unshadow.
 
@@ -32,7 +38,9 @@ Suponemos que hemos conseguido tener un acceso root y hemos conseguido una copia
 
 `	 # cp /etc/shadow ./shadow.txt`
 
-\# unshadow passwd.txt shadow.txt > nombrefichero
+`    # unshadow passwd.txt shadow.txt > nombrefichero`
+
+## **Demo Brute**
 
 Una vez hayamos fusionado el fichero, empezaremos probando el primer método el cual es single crack. 
 
@@ -48,6 +56,8 @@ Para ver los hashes crackeados se usa el siguiente comando
 
 
 como podemos ver con single crack no ha crackeado ninguna contraseña, debido a que el nivel de las contraseñas son medianamente fuertes. He usado el comando pwgen para generarlas.
+
+## **Demo Dicc**
 
 Ahora que ya hemos utilizado el modo single crack, probaremos el modo diccionario.
 
@@ -79,13 +89,13 @@ Por último veremos el funcionamiento del modo externo, para ello, debemos usar 
 
 ![c5](img/alumno4/John_The_Ripper_c5.png)
 
-**Funcionamiento en Windows**
+## **Funcionamiento en Windows**
 
 Para crackear contraseñas de usuarios en Windows, necesitamos obtener los hashes de las contraseñas. Para ello, usaremos en la máquina windows la herramienta mimikatz.
 
 Una vez descargado mimikatz, elevamos los privilegios con el siguiente comando.
 
-\# token::elevate
+`   # token::elevate`
 
 ![c6](img/alumno4/John_The_Ripper_c6.png)
 
@@ -97,7 +107,7 @@ Una vez obtenidos los hashes, utilizaremos John para crackearlos. Hemos instalad
 
 ![c8](img/alumno4/John_The_Ripper_c8.png)
 
-**Funcionamiento en Apache2.**
+## **Funcionamiento en Apache2.**
 
 Para atacar a un servidor apache con John, tenemos que atacar al archivo htpasswd, es una utilidad que tiene por función almacenar contraseñas de forma cifrada para ser utilizadas por Apache en servicios de autenticación. Su uso nos permitiría mostrar determinados directorios o archivos vía http solo a usuarios identificados y sin que necesariamente estén a libre disposición de todo el mundo.
 
@@ -111,7 +121,7 @@ Una vez creado los usuarios, haremos que esté operativo en nuestro servidor y c
 
 Para ello, tenemos que editar el fichero de configuración de apache.
 
-\# sudo nano /etc/apache2/apache2.conf
+`   # sudo nano /etc/apache2/apache2.conf`
 
 Añadimos lo siguiente
 
