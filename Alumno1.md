@@ -4,8 +4,6 @@
 
 Nessus es un programa para realizar escaneos sobre los dispositivos de las redes en busca de vulnerabilidades
 
----
-
 ## **-Instalación**
 
 Instalamos el paquete wget con el comando:
