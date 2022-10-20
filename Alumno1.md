@@ -8,14 +8,14 @@ Nessus es un programa para realizar escaneos sobre los dispositivos de las redes
 
 Instalamos el paquete wget con el comando:
 
-apt update && sudo apt install wget -y
+`apt update && sudo apt install wget -y`
 
 ![c1](img/alumno1/sad_p1_c9.PNG)
 
 Descargamos el archivo .deb de Nessus
-
+```
 wget https://www.tenable.com/downloads/api/v1/public/pages/nessus/downloads/16870/download?i\_agree\_to\_tenable\_license\_agreement=true -O Nessus-10.3.0-debian9\_amd64.deb
-
+```
 ![c2](img/alumno1/sad_p1_c10.PNG)
 
 
