@@ -36,11 +36,11 @@ APT\_AUTOGEN="true"
 
 Luego crearemos un script para automatizar el chequeo en /etc/cron.daily
 
-![c1](img/alumno3/rkhunter_c1.png)
+![c1](/img/alumno3/rkhunter_c1.png)
 
 Por último haremos que crontab ejecute este script todos los días a una hora determinada, para ello editamos el fichero /etc/crontab
 
-![c2](img/alumno3/rkhunter_c2.png)
+![c2](/img/alumno3/rkhunter_c2.png)
 
 En mi caso se ejecutará todos los días a las 10:30
 
@@ -48,7 +48,7 @@ Por último hacemos el chequeo manual para comprobar el funcionamiento de rkhunt
 
 `rkhunter -c`
 
-![c3](img/alumno3/rkhunter_c3.png)
+![c3](/img/alumno3/rkhunter_c3.png)
 
 Mi sistema de fichero está estable.
 
@@ -70,11 +70,11 @@ Y editamos la siguiente línea
 
 MAIL-ON-WARNING=root@localhost
 
-![c4](img/alumno3/rkhunter_c4.png)
+![c4](/img/alumno3/rkhunter_c4.png)
 
 Podemos poner un correo cualquiera, o que simplemente se lo notifique a root.
 
-![c5](img/alumno3/rkhunter_c5.png)
+![c5](/img/alumno3/rkhunter_c5.png)
 
 Para crear una snaphot de nuestro sistema de fichero debemos de ejecutar:
 
@@ -94,21 +94,14 @@ Tripwire sirve para prácticamente lo mismo que rkhunter, aunque hay que decir q
 
 Una vez instalado, tenemos que configurar nuestra clave para usar este binario:
 
-![c6](img/alumno3/rkhunter_c6.png)
+![c6](/img/alumno3/rkhunter_c6.png)
 
-![c7](img/alumno3/rkhunter_c7.png)
+![c7](/img/alumno3/rkhunter_c7.png)
 
-![c8](img/alumno3/rkhunter_c8.png)
+![c8](/img/alumno3/rkhunter_c8.png)
 
 Nos crea el fichero de configuración por defecto
 
-![c9](img/alumno3/rkhunter_c9.png)
+![c9](/img/alumno3/rkhunter_c9.png)
 
 Introducimos la clave que usaremos.
-
-
-
-
-
-
-
