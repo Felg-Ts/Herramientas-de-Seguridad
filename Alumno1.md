@@ -133,7 +133,7 @@ Cuando terminemos de configurar el escaneo lo ejecutamos.
 
 Esta parte del proceso es igual al escaneo anterior pero con la diferencia de que ahora en vez de escanear solo un host ahora son todos los host de la red.
 
-![c20](img/alumno1/sad_p1_20.PNG)
+![c20](img/alumno1/sad_p1_c20.PNG)
 
 ## **-Monitorización continua**
 
@@ -167,7 +167,7 @@ Ya está configurado el escaneo. Lo puse para las 23:10 ya son las 23:11 y como 
 
 ## **-Alertas Correo**
 
-# **Instalación postfix**
+### **Instalación postfix**
 
 Para recibir alertas por correo primero tenemos que configurar el servidor de correo postfix:
 
@@ -179,7 +179,7 @@ sudo apt install postfix
 
 En el menú que aparece seleccionamos **internet site**, y en el siguiente diálogo introducimos (si no está ya) el hostname que consultamos antes.
 
-# **Configuración postfix**
+### **Configuración postfix**
 
 Para configurar el servidor editamos el fichero /etc/postfix/main.cf, tenemos que modificar las siguientes líneas:
 
